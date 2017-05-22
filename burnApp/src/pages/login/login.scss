@@ -1,3 +1,52 @@
 page-login {
+  .login-page-warp{
+    background-image: url("../../assets/images/loginbg.png") !important;
+  }
+  .login-page-logo{
+    margin-top: 100px;
+    font-size: 3em;
+    margin-left: 10px;
+    color: #56ffe7;
+  }
+  .login-page-logo span{
+    font-size: 0.5em;
+    color: white;
+  }
+  .login-page-box{
+    margin-top: 30px;
+    height: 30px;
+  }
+  .login-page-box p{
+    text-align: right;
+    color: white;font-size: 0.7em;
+    padding-right: 5px;
+  }
+  .login-page-box h6{
+    position: relative;
+    bottom: -150px;
+    font-size: 1em;
+    text-align: center;
+    margin-bottom: -50px;
+  }
+  .login-page-box h6 span{
+    color: #007aff;
+  }
+  .login-page-input{
+    margin-bottom: 20px;
+    border-radius: 7px;
+    padding-left: 0px;
+    font-size: 1em;
+  }
+
+  .login-page-submit{
+    background-color: #5a9eff;
+    opacity: 0.8;
+    color: white;
+    letter-spacing: .5em;
+    font-size: 1.5em;
+    border-radius: 5px;
+    box-shadow: 2px 1px 2px #a8a8a8;
+  }
+
 
 }
