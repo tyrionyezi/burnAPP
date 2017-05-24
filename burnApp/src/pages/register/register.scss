@@ -1,0 +1,31 @@
+page-register {
+  .register-page-warp{
+    background-image: url("../../assets/images/loginbg.png") !important;
+  }
+
+  .regiseter-page-logo{
+    font-size: 8em;
+    text-align: center;
+    color: #ffffff;
+    margin:0px auto;
+  }
+  .register-page-box{
+    margin-top: 10px;
+    height: 30px;
+  }
+  .register-page-input{
+    margin-bottom: 20px;
+    border-radius: 7px;
+    padding-left: 0px;
+    font-size: 1em;
+  }
+  .register-page-submit{
+    background-color: #5a9eff;
+    opacity: 0.8;
+    color: white;
+    letter-spacing: .5em;
+    font-size: 1.5em;
+    border-radius: 5px;
+    box-shadow: 2px 1px 2px #a8a8a8;
+  }
+}

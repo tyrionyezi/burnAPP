@@ -21,4 +21,5 @@ export class BlogPage {
     console.log('ionViewDidLoad BlogPage');
   }
 
+
 }

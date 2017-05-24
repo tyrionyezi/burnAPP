@@ -1,3 +1,116 @@
 page-home {
+  .home-page-exercise {
+    background-color: white;
+    padding: 0px 15px;
+  }
+  .page-tilte{
+    height: 60px !important;
+    border: none;
+  }
+  .page-tilte div{
+    background-color: #00BFF0 !important;
+    color: white !important;
+    letter-spacing: 1em;
+    font-weight: 400;
+    border: none !important;
+    overflow: visible;
+  }
+  .page-tilte ion-title {
+    text-align: center;
+  }
+  @keyframes rotating{
+    from{transform:rotate(0)}
+    to{transform:rotate(360deg)}
+  }
+
+  #course-name{
+    animation:rotating 5s linear infinite;
+  }
+
+
+  .home-page-step-box {
+    height: 100px;
+  }
+  .home-page-step {
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    border: solid 5px grey;
+    line-height: 80px;
+    text-align: center;
+    margin: 0px auto;
+  }
+  .home-page-schedule {
+    position: relative;
+    text-align: center;
+    background-color: #eeeeee;
+  }
+  .home-page-schedule img{
+    height: 200px;
+    width: 100%;
+    background-position: center;
+  }
+  .home-page-schedule-title {
+    padding: 0px 15px;
+    line-height: 35px;
+    text-align: left;
+  }
+  .card-title {
+    position: absolute;
+    top: 36%;
+    font-size: 2.0em;
+    width: 100%;
+    font-weight: bold;
+    color: #fff;
+  }
+
+  .card-subtitle {
+    font-size: 1.0em;
+    position: absolute;
+    top: 52%;
+    width: 100%;
+    color: #fff;
+  }
+
+  .home-page-course-content{
+    display: inline-block;
+    width: 50%;
+    height: 140px;
+    margin-right: -5px;
+    margin-top: -5px;
+    overflow: hidden;
+  }
+  .home-page-course-content img{
+    animation: homeCourse 7s linear infinite;
+  }
+
+  @keyframes homeCourse{
+    from{
+      opacity: 0.6;
+    }
+    to{
+      opacity: 1;
+    }
+  }
+
+  #course-name{
+    animation:rotating 5s linear infinite;
+  }
+
+  .home-page-course-content img{
+    width: 100%;
+    display: block;
+    border: 0;
+  }
+
+
+
+
+
+
+
+
+
+
 
 }

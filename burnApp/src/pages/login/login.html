@@ -6,15 +6,20 @@
     <ion-col col-12 class="login-page-box">
       <ion-list>
         <ion-item class="login-page-input">
-          <ion-input type="text" placeholder="请输入用户名" ng-module="userAccount" (blur)="checkAccount('top')" clearInput=true></ion-input>
+          <ion-input type="text" placeholder="账号" [(ngModel)]="userAccount" (blur)="checkAccount('top')" clearInput=true></ion-input>
         </ion-item>
         <ion-item class="login-page-input">
-          <ion-input type="password" placeholder="请输入密码" value="" clearInput=true></ion-input>
+          <ion-input type="password" placeholder="密码" value="" clearInput=true></ion-input>
         </ion-item>
       </ion-list>
       <button ion-button block class="login-page-submit" (click)="login()" type="submit">登录</button>
       <!--<button ion-button block  (click)="showToast('top')">Show Toast Top Position</button>-->
-      <p>没用账号？注册新用户</p>
+      <p (click)="register()">没用账号？注册新用户</p>
+      <div style="margin: auto;text-align:center">
+        <i class="iconfont icon-wechat login-page-other"></i>
+        <i class="iconfont icon-weibo login-page-other"></i>
+        <i class="iconfont icon-QQ login-page-other"></i>
+      </div>
       <h6>登陆即代表阅读并同意 <span>服务条款</span></h6>
     </ion-col>
   </ion-row>
