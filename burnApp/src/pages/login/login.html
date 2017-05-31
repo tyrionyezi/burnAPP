@@ -9,7 +9,7 @@
           <ion-input type="text" placeholder="账号" [(ngModel)]="userAccount" (blur)="checkAccount('top')" clearInput=true></ion-input>
         </ion-item>
         <ion-item class="login-page-input">
-          <ion-input type="password" placeholder="密码" value="" clearInput=true></ion-input>
+          <ion-input type="password" placeholder="密码" [(ngModel)]="userPassword" clearInput=true></ion-input>
         </ion-item>
       </ion-list>
       <button ion-button block class="login-page-submit" (click)="login()" type="submit">登录</button>

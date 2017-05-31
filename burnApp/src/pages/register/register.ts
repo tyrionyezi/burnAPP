@@ -1,15 +1,19 @@
 import { Component } from '@angular/core';
 import { IonicPage,NavParams,NavController,ViewController,AlertController,ToastController,ModalController} from 'ionic-angular';
-/**
- * Generated class for the RegisterPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
+//导入tabsPage
+import { TabsPage } from '../tabs/tabs';
+
+//导入请求数据服务
+import { UserProvider } from '../../providers/user/user';
+
+//引入本地缓存模块
+import { Storage } from '@ionic/storage';
+
 @IonicPage()
 @Component({
   selector: 'page-register',
   templateUrl: 'register.html',
+  providers: [UserProvider]
 })
 export class RegisterPage {
 
@@ -18,6 +22,8 @@ export class RegisterPage {
               public alertController:AlertController,
               public toastCtrl:ToastController,
               public modalCtrl:ModalController,
+              public userService: UserProvider,
+              public storage:Storage,
               public navParams: NavParams) {
 
   }
@@ -125,5 +131,48 @@ export class RegisterPage {
 
       toast.present(toast);
     }
+  } //确认密码验证结束
+
+
+  register(){
+    let data={
+      utel:this.userAccount,
+      upwd:this.userPWD,
+    };
+    console.log(1);
+    console.log(data);
+    this.userService.register(data).then((data)=>{
+      if(data.result==1){
+        let userInfo={
+          utel:this.userAccount,
+          token:data.token,
+        };
+        this.storage.set('userInfo',userInfo);
+        let model = this.modalCtrl.create(TabsPage);
+        model.present();
+      }else {
+        let toast = this.toastCtrl.create({
+          message: '手机号已被注册',
+          duration: 3000
+        });
+        toast.present();
+      }
+    },(error)=>{
+      let toast = this.toastCtrl.create({
+        message: '网络异常',
+        duration: 3000
+      });
+      toast.present();
+    })
   }
+
+
+
+
+
+
+
+
+
+
 }

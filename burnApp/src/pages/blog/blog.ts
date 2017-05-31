@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+//注入依赖
+import { IonicPage, NavController, NavParams,ModalController } from 'ionic-angular';
+//导入博客详情页面
+import { BlogDetailPage } from '../blog-detail/blog-detail';
 
 /**
  * Generated class for the BlogPage page.
@@ -14,12 +17,20 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class BlogPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController,
+              public modalCtrl:ModalController,
+              public navParams: NavParams) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad BlogPage');
-  }
+  // ionViewDidLoad() {
+  //   console.log('ionViewDidLoad BlogPage');
+  // }
 
+
+  //跳转到详情页面
+  blogDetail(){
+    let blogdetail = this.modalCtrl.create(BlogDetailPage);
+    blogdetail.present();
+  }
 
 }

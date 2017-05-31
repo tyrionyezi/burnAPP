@@ -1,2 +1,18 @@
 page-blog {
+  .page-tilte{
+    height: 60px !important;
+    border: none;
+  }
+  .page-tilte div{
+    background-color: #00BFF0 !important;
+    color: white !important;
+    letter-spacing: 1em;
+    font-weight: 400;
+    border: none !important;
+    overflow: visible;
+  }
+  .page-tilte ion-title {
+    text-align: center;
+  }
 }
+
