@@ -17,6 +17,8 @@ router.get('/', function(req, res, next) {
 
 /*post方式登录*/
 router.post('/login', function(req, res, next) {
+    console.log(4);
+    console.log(req.body);
     var user=req.body;
     if(user!=null && user.utel!=null && user.upwd!=null){
         if(user.utel.length==11){
